@@ -8,9 +8,55 @@
 </style>
 </head>
 <body>
-<header class="hero"><div class="card"><div class="eyebrow">You Are Cordially Invited</div><h1 class="name">Dory</h1><div class="age">75</div><div class="subtitle">A Celebration of Life, Love & Beautiful Memories</div><div class="details"><div class="detail"><strong>Date</strong><span>December 5, 2026</span></div><div class="detail"><strong>Time</strong><span>5:00 PM</span></div><div class="detail"><strong>Venue</strong><span>Kamay Kainan (QC)</span></div></div><a class="button" href="#rsvp">Kindly RSVP</a></div></header>
-<section><div class="container"><h2 class="title">Save the Date</h2><p class="intro">Please join us as we celebrate Dory's wonderful 75 years surrounded by family, friends, love, and cherished memories.</p><div class="countdown" id="countdown"><div class="count"><b id="days">0</b><small>Days</small></div><div class="count"><b id="hours">0</b><small>Hours</small></div><div class="count"><b id="minutes">0</b><small>Minutes</small></div><div class="count"><b id="seconds">0</b><small>Seconds</small></div></div></div></section>
-<section class="rsvp" id="rsvp"><div class="container"><h2 class="title">RSVP</h2><p class="intro">Kindly confirm your attendance on or before <strong>November 15, 2026</strong>.</p><form id="rsvpForm" action="https://script.google.com/macros/s/AKfycbwCIZySdnA07q26g-cOh40OyWz4rlSGrbNApWnPSEfG9oN-1LteBXididp824FKf0GU/exec" method="POST" target="rsvpSubmitFrame"><label for="name">Guest Name *</label><input id="name" name="name" required placeholder="Enter your full name"><label for="attendance">Will you be attending? *</label><select id="attendance" name="attendance" required><option value="">Please select</option><option value="Yes, I will attend">Yes, I will attend</option><option value="Sorry, I cannot attend">Sorry, I cannot attend</option></select><div id="seniorCitizenField" style="display:none"><label for="senior_citizen">Are you a senior citizen (60 years old or above)? *</label><select id="senior_citizen" name="senior_citizen" required><option value="">Please select</option><option value="Yes">Yes</option><option value="No">No</option></select></div><input type="hidden" id="guests" name="guests" value="0"><button class="submit" type="submit">Submit RSVP</button><script>
+<header class="hero">
+  <div class="card">
+    <div class="eyebrow">You Are Cordially Invited</div>
+    <h1 class="name">Dory</h1>
+    <div class="age">75</div>
+    <div class="subtitle">A Celebration of Life, Love & Beautiful Memories</div>
+    <div class="details">
+      <div class="detail"><strong>Date</strong><span>December 5, 2026</span></div>
+      <div class="detail"><strong>Time</strong><span>5:00 PM</span></div>
+      <div class="detail"><strong>Venue</strong><span>Kamay Kainan (QC)</span></div>
+    </div>
+    <a class="button" href="#rsvp">Kindly RSVP</a>
+  </div>
+</header>
+<section>
+  <div class="container"><h2 class="title">Save the Date</h2><p class="intro">Please join us as we celebrate Dory's wonderful 75 years surrounded by family, friends, love, and cherished memories.</p>
+    <div class="countdown" id="countdown">
+      <div class="count"><b id="days">0</b><small>Days</small></div>
+      <div class="count"><b id="hours">0</b><small>Hours</small></div>
+      <div class="count"><b id="minutes">0</b><small>Minutes</small></div>
+      <div class="count"><b id="seconds">0</b><small>Seconds</small></div>
+    </div>
+  </div>
+</section>
+<section class="rsvp" id="rsvp">
+  <div class="container">
+    <h2 class="title">RSVP</h2>
+    <p class="intro">Kindly confirm your attendance on or before <strong>November 15, 2026</strong>.</p>
+    <form id="rsvpForm" action="https://script.google.com/macros/s/AKfycbwCIZySdnA07q26g-cOh40OyWz4rlSGrbNApWnPSEfG9oN-1LteBXididp824FKf0GU/exec" method="POST" target="rsvpSubmitFrame">
+      <label for="name">Guest Name *</label>
+      <input id="name" name="name" required placeholder="Enter your full name">
+      <label for="attendance">Will you be attending? *</label>
+      <select id="attendance" name="attendance" required>
+        <option value="">Please select</option>
+        <option value="Yes, I will attend">Yes, I will attend</option>
+        <option value="Sorry, I cannot attend">Sorry, I cannot attend</option>
+      </select>
+      <div id="seniorCitizenField" style="display:none">
+        <label for="senior_citizen">Are you a senior citizen (60 years old or above)? *</label>
+        <select id="senior_citizen" name="senior_citizen" required>
+          <option value="">Please select</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <input type="hidden" id="guests" name="guests" value="0">
+      <button class="submit" type="submit">Submit RSVP</button>
+    </form>
+    <script>
 const attendanceSelect = document.getElementById("attendance");
 const seniorCitizenField = document.getElementById("seniorCitizenField");
 const seniorCitizenSelect = document.getElementById("senior_citizen");
@@ -26,8 +72,28 @@ function updateSeniorCitizenQuestion() {
 
 attendanceSelect.addEventListener("change", updateSeniorCitizenQuestion);
 updateSeniorCitizenQuestion();
-</script><div id="confirmation">Thank you! Your RSVP has been submitted successfully.<div id="seniorMessage"><br><strong>Bringing your Senior Citizen ID card will be much appreciated.</strong></div></div></form><iframe name="rsvpSubmitFrame" id="rsvpSubmitFrame" style="display:none" title="RSVP submission"></iframe><p class="intro">RSVP Contact: <strong>Manny Kitan</strong><br>09089717699</p></div></section>
+</script>
+<div id="confirmation">Thank you! Your RSVP has been submitted successfully.
+  <div id="seniorMessage"><br><strong>Please bring your Senior Citizen ID card with you.</strong></div>
+</div>
+</form>
+<iframe name="rsvpSubmitFrame" id="rsvpSubmitFrame" style="display:none" title="RSVP submission"></iframe>
+<p class="intro">RSVP Contact: <strong>Manny Kitan</strong><br>09089717699</p></div></section>
 <footer>With love, we look forward to celebrating this special milestone with you.</footer>
 <script>
-const eventDate=new Date('December 5, 2026 17:00:00').getTime();function update(){const d=eventDate-Date.now();if(d<=0){document.getElementById('countdown').innerHTML='<p style="grid-column:1/-1;text-align:center">The celebration is here! 🎉</p>';return}days.textContent=Math.floor(d/86400000);hours.textContent=Math.floor(d/3600000)%24;minutes.textContent=Math.floor(d/60000)%60;seconds.textContent=Math.floor(d/1000)%60}update();setInterval(update,1000);const form=document.getElementById('rsvpForm');const confirmation=document.getElementById('confirmation');form.addEventListener('submit',()=>{const button=form.querySelector('.submit');button.disabled=true;button.textContent='Submitting...';setTimeout(()=>{confirmation.style.display='block';document.getElementById('seniorMessage').style.display=(document.getElementById('senior_citizen').value==='Yes')?'block':'none';confirmation.scrollIntoView({behavior:'smooth',block:'center'});form.reset();button.disabled=false;button.textContent='Submit RSVP'},700)});</script>
+const eventDate=new Date('December 5, 2026 17:00:00').getTime();function update(){const d=eventDate-Date.now();
+if(d<=0){document.getElementById('countdown').innerHTML='<p style="grid-column:1/-1;text-align:center">The celebration is here! 🎉</p>';
+return}days.textContent=Math.floor(d/86400000);
+hours.textContent=Math.floor(d/3600000)%24;
+minutes.textContent=Math.floor(d/60000)%60;
+seconds.textContent=Math.floor(d/1000)%60}update();
+setInterval(update,1000);const form=document.getElementById('rsvpForm');
+const confirmation=document.getElementById('confirmation');
+form.addEventListener('submit',()=>{const button=form.querySelector('.submit');
+button.disabled=true;button.textContent='Submitting...';
+setTimeout(()=>{confirmation.style.display='block';
+document.getElementById('seniorMessage').style.display=(document.getElementById('senior_citizen').value==='Yes')?'block':'none';
+confirmation.scrollIntoView({behavior:'smooth',block:'center'});form.reset();
+button.disabled=false;button.textContent='Submit RSVP'},700)});
+</script>
 </body></html>
